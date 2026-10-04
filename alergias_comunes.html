@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alergias comunes</title>
+    <link rel="stylesheet" href="alergias_comunes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="alergias_comunes.js" defer></script>
+</head>
+<body>
+    <!------------------------------------->
+    <!--|estructuracion_alergias_comunes|-->
+    <!------------------------------------->
+    <header class="encabezado">
+        <h1>Alergias Comunes</h1>
+        <p>Consulta, busca y agrega alergias con una breve descripción.</p>
+    </header>
+    <!-- Fin del encabezado -->
+    <!-- Contenido principal de la página: cuatro paneles -->
+    <!-- Los paneles son secciones con fondo blanco -->
+    <main>
+        <!-- Panel con las instrucciones de uso -->
+        <section class="panel">
+            <!-- Título del panel -->
+            <h2>Cómo usar esta página</h2>
+            <!-- Lista numerada con los pasos -->
+            <ol>
+                <!-- Paso 1 -->
+                <li>Revisa la lista de alergias comunes.</li>
+                <!-- Paso 2 -->
+                <li>Usa el buscador para encontrar una por su nombre.</li>
+                <!-- Paso 3 -->
+                <li>Agrega nuevas alergias con su descripción.</li>
+                <!-- Paso 4 -->
+                <li>Elimina las que no necesites con el botón rojo.</li>
+            </ol>
+        </section>
+        <!-- Fin del panel de instrucciones -->
+        <!-- Nota informativa: la página no reemplaza a un profesional de la salud -->
+        <section class="panel nota">
+            <p>Esta lista es solo informativa. Si tienes síntomas, consulta a un profesional de la salud.</p>
+        </section>
+        <!-- Fin de la nota informativa -->
+        <!-- Panel para agregar una alergia nueva -->
+        <section class="panel">
+            <!-- Título del panel -->
+            <h2>Agregar una alergia</h2>
+            <!-- Campo del nombre de la alergia -->
+            <label for="nombre">Nombre</label>
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Ej: Alergia al látex"
+                maxlength="40"
+            >
+            <!-- Campo de la descripción -->
+            <label for="descripcion">Descripción</label>
+            <textarea
+                id="descripcion"
+                rows="3"
+                placeholder="Escribe una descripción corta"
+                maxlength="200"
+            ></textarea>
+            <!-- Aquí JavaScript muestra mensajes de error -->
+            <p id="mensaje"></p>
+            <!-- Botón que agrega la alergia a la lista -->
+            <button id="btnAgregar">Agregar alergia</button>
+        </section>
+        <!-- Fin del formulario -->
+        <!-- Panel con el buscador y la lista -->
+        <section class="panel">
+            <!-- Título del panel -->
+            <h2>Lista de alergias</h2>
+            <!-- Buscador: filtra la lista mientras se escribe -->
+            <input type="search" id="buscador" placeholder="Buscar alergia...">
+            <!-- Texto con la cantidad de alergias mostradas -->
+            <p id="contador"></p>
+            <!-- Lista donde JavaScript dibuja las alergias -->
+            <ul id="lista"></ul>
+            <!-- Mensaje que aparece cuando no hay resultados -->
+            <p id="vacio" class="oculto">No se encontraron alergias.</p>
+            <!-- Botón que vuelve a la lista inicial -->
+            <button id="btnRestaurar" class="secundario">Restaurar lista inicial</button>
+        </section>
+        <!-- Fin de la lista -->
+    </main>
+</body>
+</html>
