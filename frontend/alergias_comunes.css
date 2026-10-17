@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --fondo: #f1eefb;
+    --tinta: #2b2350;
+    --blanco: #ffffff;
+    --morado: #7b5cd6;
+    --borde: #d9d2f0;
+    --rojo: #d64550;
+}
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background: var(--fondo);
+    color: var(--tinta);
+    line-height: 1.5;
+}
+/*-----------------------------*/
+/*--|estilo_alergias_comunes|--*/
+/*-----------------------------*/
+.encabezado {
+    background: var(--tinta);
+    color: var(--blanco);
+    text-align: center;
+    padding: 40px 20px;
+}
+.encabezado h1 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 30px 20px 50px;
+}
+/*---------------------------------*/
+/*--|estilo_paneles_de_contenido|--*/
+/*---------------------------------*/
+.panel {
+    background: var(--blanco);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.panel ol {
+    padding-left: 20px;
+}
+.nota {
+    border-left: 8px solid var(--morado);
+}
+input,
+textarea {
+    padding: 10px 12px;
+    border: 2px solid var(--borde);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+}
+textarea {
+    resize: vertical;
+}
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--morado);
+}
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--morado);
+    color: var(--blanco);
+    font-size: 1rem;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.85;
+}
+.secundario {
+    background: transparent;
+    color: var(--tinta);
+    border: 2px solid var(--borde);
+}
+#mensaje {
+    color: var(--rojo);
+    min-height: 1.5em;
+}
+/*------------------------------*/
+/*--|estilo_lista_de_alergias|--*/
+/*------------------------------*/
+#lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.alergia {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    border: 2px solid var(--borde);
+    border-left: 8px solid var(--morado);
+    border-radius: 10px;
+}
+.alergia h3 {
+    margin-bottom: 4px;
+}
+.btn-eliminar {
+    background: var(--rojo);
+    padding: 8px 12px;
+    font-size: 0.9rem;
+}
+#contador,
+#vacio {
+    color: #6a6290;
+}
+.oculto {
+    display: none;
+}
